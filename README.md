@@ -34,6 +34,19 @@
 1. The TransferState module allows you to pass your state information from the server to the new bootstrapping client and so avoiding for example double http requests.
 1. Guard events: `CanActivate, CanDeactivate, CanActivateChild, CanLoad (lazy), Resolve`
 
+## General
+
+* You can import `bootstrap` using this line in the `style.scss`: `@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');`
+
+## Forms
+
+### Template Driven Forms
+
+* `<label for="power">Power:</label>` use the `for` attribute for the `id` of the `input` they are related to
+* When you use `ngModel` inside a `form` you must use the `name` attribute otherwise it won't get initialized right away.
+
+### Reactive Forms
+
 ## JavaScript
 
 1. That you can make object mutation immnutable by doing it like this: `passenger = Object.assign({}, passenger, newPassenger);`
