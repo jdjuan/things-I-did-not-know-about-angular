@@ -38,6 +38,12 @@
 
 * You can import `bootstrap` using this line in the `style.scss`: `@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');`
 
+## Pipes
+
+* In general they are pure, which they work with an `onPush` strategy. When you set the `pure` flag to `false`, then it will execute with every cycle of the change detection, every typing, every mouse move, reference change, etc.
+* If when using a pure pipe, you use an impure transfor function, one that alters the input value, then you will get errors regarding expressions that changed after they were checked.
+* Pipes can cache one response to avoid doing expensive calculations. Although every pipe you put in a template have its own instance, they share their variables. See [here](https://angular.io/guide/pipes#an-impure-caching-pipe)
+
 ## Forms
 
 ### Template Driven Forms
